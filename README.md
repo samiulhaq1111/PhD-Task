@@ -2,7 +2,7 @@
 
 A small-scale, compute-constrained study inspired by the Natural Language Autoencoder methodology from [Fraser-Taliente, Kantamneni, Ong et al. (2026)](https://transformer-circuits.pub/2026/nla/index.html), applied to SmolLM2-135M. This README documents what was implemented, the choices made, the results, and an honest account of where the architecture diverges from the paper and why.
 
-All code is in [`01-kaggle-experiment.ipynb`](./01-kaggle-experiment.ipynb). Outputs are in [`results/`](./results/).
+All code is in [`01-kaggle-experiment.ipynb`](./01-kaggle-experiment.ipynb). Outputs are in Juppiter Notebook.
 
 ---
 
@@ -104,7 +104,7 @@ The per-sample reconstruction error distribution (KMeans K=128) is right-skewed 
 
 The KMeans explanations were usually readable but generic. Several high-cosine reconstructions had explanations dominated by common TinyStories words such as "little", "girl", "said", "mom", or character names. These labels were enough to identify the activation cluster, but they did not describe fine-grained differences between individual activations within the cluster.
 
-A representative best-reconstruction example (from [`results/best_examples_k128.csv`](./results/best_examples_k128.csv)):
+A representative best-reconstruction example:
 
 > **Text:** *"Once upon a time, there was a little girl named Lily. She loved to play in the garden with her mom..."*
 > **Explanation:** *"This activation is from text about little, girl, said, love, home."*
@@ -112,7 +112,7 @@ A representative best-reconstruction example (from [`results/best_examples_k128.
 
 The explanation correctly identifies the broad topic but says nothing about the narrative state — whether the character is happy, what event is occurring, or where in the story the activation was extracted. Two very different story moments could receive the same label if they share common words.
 
-A representative worst-reconstruction example (from [`results/worst_examples_k128.csv`](./results/worst_examples_k128.csv)):
+A representative worst-reconstruction example:
 
 > **Text:** *A story that shifts mid-narrative from domestic to adventure context.*
 > **Explanation:** *"This activation is from text about little, home, away, forest, said."*
