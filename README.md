@@ -87,7 +87,6 @@ activation vector
 | Activation-neighbor LLM verbalizer | -0.079 | 0.734 |
 | Nearest-neighbor centroid baseline | 0.597 | 0.915 |
 
-Full results are in [`results/summary_results.csv`](./results/summary_results.csv).
 
 The KMeans + TF-IDF explanation method achieved FVE = 0.494. However, its score is almost identical to the KMeans cluster-centroid baseline (FVE = 0.492). This shows that the explanation string mostly encodes cluster membership. Since all points in the same cluster receive the same explanation, the reconstructor behaves almost like a cluster-centroid predictor. The natural language label adds a gap of 0.002 — essentially nothing.
 
