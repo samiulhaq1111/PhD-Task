@@ -52,7 +52,7 @@ K-sweep results (K ∈ {8, 16, 32, 64, 128}):
 | 64 | 0.45 | 0.45 | -0.12 |
 | 128 | 0.494 | 0.492 | -0.116 |
 
-![Activation reconstruction quality vs number of clusters](results/figures/fve_by_cluster_count.png)
+![Activation reconstruction quality vs number of clusters](Images/image.png)
 
 FVE rises with K for the centroid baseline throughout, and the text explanation reconstructor catches up only at K=64–128. The prompt text baseline stays flat at approximately −0.12 regardless of K, confirming it carries no useful information for reconstruction at any granularity. The gap between text explanation and centroid narrows at high K but never closes, confirming the explanation encodes little beyond cluster identity.
 
@@ -96,7 +96,7 @@ The nearest-neighbor centroid baseline achieved the strongest score, FVE = 0.597
 
 The per-sample reconstruction error distribution (KMeans K=128) is right-skewed with most samples reconstructed at low MSE, but a long tail extending to MSE > 20. These high-error outliers correspond to activations at topic or genre boundaries where no single cluster centroid is a close approximation.
 
-![Distribution of reconstruction errors, K=128](results/figures/reconstruction_error_distribution_k128.png)
+![Distribution of reconstruction errors, K=128](Images/Distribution.png)
 
 ---
 
